@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "mod",
+	"version": "${version}",
+	"name": "mod",
+	"description": "Madonna puttana",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mod.Mod"
+		],
+		"fabric-datagen": [
+			"com.mod.ModDataGenerator"
+		],
+
+		"client": [
+			"com.mod.ModClient"
+		]
+	},
+	"mixins": [
+		"mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
